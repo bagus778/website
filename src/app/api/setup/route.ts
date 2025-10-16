@@ -116,6 +116,8 @@ PAYMENT_PROVIDER=stripe
 STRIPE_SECRET_KEY=${stripeSecretKey || ''}
 NEXT_PUBLIC_STRIPE_PUBLIC_KEY=${stripePublicKey || ''}
 # Get webhook secret from: https://dashboard.stripe.com/test/webhooks
+# Webhook URL: https://your-domain.com/api/stripe/webhook
+# Events to enable: payment_intent.succeeded, payment_intent.payment_failed
 STRIPE_WEBHOOK_SECRET=${stripeWebhookSecret || ''}
 
 # Coinbase Commerce - For Cryptocurrency payments (Bitcoin, Ethereum, USDC, etc.)
@@ -126,6 +128,8 @@ STRIPE_WEBHOOK_SECRET=${stripeWebhookSecret || ''}
 # Also set a business name https://beta.commerce.coinbase.com/settings/business
 COINBASE_COMMERCE_API_KEY=${coinbaseApiKey || ''}
 # Get webhook secret from: https://beta.commerce.coinbase.com/settings/notifications
+# Webhook URL: https://your-domain.com/api/coinbase/webhook
+# Events to enable: charge:confirmed, charge:failed, charge:pending, charge:resolved
 COINBASE_COMMERCE_WEBHOOK_SECRET=${coinbaseWebhookSecret || ''}
 
 # Email (Optional)
