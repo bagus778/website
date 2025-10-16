@@ -1,0 +1,288 @@
+/* Store Common Styles - Layout, Loading, Utilities */
+
+/* ======================
+   LAYOUT CONTAINERS
+   ====================== */
+.page-container {
+  min-height: 100vh;
+  background: var(--theme-gradient-secondary);
+}
+
+.main-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.store-layout-decorative {
+  position: relative;
+}
+
+.store-layout-decorative::before,
+.store-layout-decorative::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+}
+
+.store-layout-decorative::before {
+  top: -1rem;
+  left: -1rem;
+  border-top: 4px solid var(--theme-text-green);
+  border-left: 4px solid var(--theme-text-green);
+}
+
+.store-layout-decorative::after {
+  top: -1rem;
+  right: -1rem;
+  border-top: 4px solid var(--theme-text-green);
+  border-right: 4px solid var(--theme-text-green);
+}
+
+.corner-decoration-bottom-left {
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+  border-bottom: 4px solid var(--theme-text-green);
+  border-left: 4px solid var(--theme-text-green);
+}
+
+.corner-decoration-bottom-right {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+  border-bottom: 4px solid var(--theme-text-green);
+  border-right: 4px solid var(--theme-text-green);
+}
+
+/* ======================
+   LOADING SPINNER
+   ====================== */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-text {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-green);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ======================
+   SECTION DIVIDERS
+   ====================== */
+.section-divider {
+  border-top: 4px solid var(--theme-border);
+  margin-top: 4rem;
+  padding-top: 3rem;
+}
+
+.section-divider-primary {
+  border-top: 4px solid var(--theme-primary);
+}
+
+/* ======================
+   MINECRAFT STYLED BOXES
+   ====================== */
+.mc-box {
+  background: var(--theme-secondary);
+  border: 4px solid var(--theme-border);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  padding: 3rem;
+  text-align: center;
+}
+
+.mc-box-small {
+  background: var(--theme-secondary);
+  border: 3px solid var(--theme-border);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  padding: 1.5rem;
+}
+
+.mc-box-tiny {
+  background: var(--theme-background);
+  border: 2px solid var(--theme-border);
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  padding: 1rem;
+}
+
+/* ======================
+   EMPTY STATES
+   ====================== */
+.empty-state {
+  background: var(--theme-secondary);
+  border: 4px solid var(--theme-border);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  padding: 3rem;
+  text-align: center;
+}
+
+.empty-state-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--theme-warning);
+}
+
+.empty-state-message {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--theme-text-secondary);
+}
+
+/* ======================
+   BREADCRUMB
+   ====================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--theme-text-secondary);
+}
+
+.breadcrumb-link {
+  color: var(--theme-text-secondary);
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  color: var(--theme-text-green);
+}
+
+.breadcrumb-separator {
+  color: var(--theme-text-muted);
+}
+
+.breadcrumb-current {
+  color: var(--theme-text-green);
+  font-weight: bold;
+}
+
+/* ======================
+   BADGES
+   ====================== */
+.badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid;
+}
+
+.badge-danger {
+  background: var(--theme-danger);
+  border-color: var(--theme-secondary);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================
+   AVATAR
+   ====================== */
+.minecraft-avatar {
+  border-radius: 0.25rem;
+}
+
+/* ======================
+   STATUS INDICATORS
+   ====================== */
+.status-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.status-indicator-success {
+  background: var(--theme-success);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.status-indicator-danger {
+  background: var(--theme-danger);
+}
+
+/* ======================
+   ALERTS
+   ====================== */
+.alert {
+  padding: 1rem;
+  border: 2px solid;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  margin-bottom: 1rem;
+}
+
+.alert-danger {
+  background: rgba(217, 83, 79, 0.2);
+  border-color: var(--theme-danger);
+  color: var(--theme-text-red);
+}
+
+.alert-warning {
+  background: rgba(240, 173, 78, 0.2);
+  border-color: var(--theme-warning);
+  color: var(--theme-text-yellow);
+}
+
+.alert-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.alert-list-item {
+  margin-top: 0.25rem;
+}

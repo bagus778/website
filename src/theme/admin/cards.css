@@ -1,0 +1,249 @@
+/* Admin Card Components */
+
+/* ======================
+   ADMIN STAT CARD
+   ====================== */
+.admin-stat-card {
+  background: var(--admin-bg-secondary);
+  border-radius: 0.5rem;
+  box-shadow: var(--admin-shadow-lg);
+  border: 1px solid var(--admin-border);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.admin-stat-card:hover {
+  border-color: var(--admin-border-light);
+}
+
+.admin-stat-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-stat-card-info {
+  flex: 1;
+}
+
+.admin-stat-card-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--admin-text-secondary);
+}
+
+.admin-stat-card-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--admin-text-primary);
+  margin-top: 0.25rem;
+}
+
+.admin-stat-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--admin-shadow-lg);
+}
+
+.admin-stat-card-icon-text {
+  font-size: 1.5rem;
+}
+
+/* Icon background colors */
+.admin-stat-card-icon-blue {
+  background: var(--admin-accent);
+}
+
+.admin-stat-card-icon-green {
+  background: var(--admin-success);
+}
+
+.admin-stat-card-icon-yellow {
+  background: var(--admin-warning);
+}
+
+.admin-stat-card-icon-purple {
+  background: #9333ea;
+  /* purple-600 */
+}
+
+.admin-stat-card-icon-orange {
+  background: #ea580c;
+  /* orange-600 */
+}
+
+.admin-stat-card-icon-red {
+  background: var(--admin-danger);
+}
+
+/* ======================
+   ADMIN SECTION CARD
+   ====================== */
+.admin-section-card {
+  background: var(--admin-bg-secondary);
+  border-radius: 0.5rem;
+  box-shadow: var(--admin-shadow-lg);
+  border: 1px solid var(--admin-border);
+  padding: 1.5rem;
+}
+
+.admin-section-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.admin-section-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--admin-text-primary);
+}
+
+.admin-section-card-subtitle {
+  font-size: 0.875rem;
+  color: var(--admin-text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* ======================
+   ADMIN INFO CARD (for guides/info boxes)
+   ====================== */
+.admin-info-card {
+  background: rgba(30, 64, 175, 0.5);
+  /* blue-900/50 */
+  border-radius: 0.5rem;
+  border: 1px solid #1e40af;
+  /* blue-800 */
+  padding: 1.5rem;
+}
+
+.admin-info-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #93c5fd;
+  /* blue-300 */
+  margin-bottom: 0.75rem;
+}
+
+.admin-info-card-content {
+  font-size: 0.875rem;
+  color: #bfdbfe;
+  /* blue-200 */
+}
+
+.admin-info-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-info-card-code {
+  background: #1e40af;
+  /* blue-800 */
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  color: #bfdbfe;
+  /* blue-200 */
+}
+
+/* ======================
+   ADMIN ACTIVITY ITEM
+   ====================== */
+.admin-activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-activity-item:last-child {
+  border-bottom: none;
+}
+
+.admin-activity-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-activity-item-avatar {
+  width: 2rem;
+  height: 2rem;
+  background: var(--admin-accent);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.admin-activity-item-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--admin-text-primary);
+}
+
+.admin-activity-item-subtitle {
+  font-size: 0.75rem;
+  color: var(--admin-text-secondary);
+}
+
+.admin-activity-item-right {
+  text-align: right;
+}
+
+.admin-activity-item-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--admin-text-primary);
+}
+
+.admin-activity-item-status {
+  font-size: 0.75rem;
+  color: var(--admin-text-secondary);
+  text-transform: capitalize;
+}
+
+/* ======================
+   ADMIN GENERIC CARD
+   ====================== */
+.admin-card {
+  background: var(--admin-bg-secondary);
+  border: 1px solid var(--admin-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.admin-card-danger {
+  background: rgba(127, 29, 29, 0.2); /* red-900/20 */
+  border-color: #7f1d1d; /* red-900 */
+}
+
+.admin-card-info {
+  background: rgba(30, 64, 175, 0.2); /* blue-900/20 */
+  border-color: #1e40af; /* blue-800 */
+}
+
+.admin-card-warning {
+  background: rgba(113, 63, 18, 0.2); /* yellow-900/20 */
+  border-color: #713f12; /* yellow-900 */
+}
+
+.admin-card-success {
+  background: rgba(20, 83, 45, 0.2); /* green-900/20 */
+  border-color: #14532d; /* green-900 */
+}
+
+.admin-card-feature {
+  background: rgba(55, 65, 81, 0.5); /* gray-700/50 */
+  border: 1px solid var(--admin-border-light);
+  border-radius: 0.75rem;
+}
+
+.admin-p-6 {
+  padding: 1.5rem;
+}
